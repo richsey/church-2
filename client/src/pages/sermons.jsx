@@ -18,9 +18,7 @@ function Sermons() {
                 allowFullScreen
               ></iframe>
             </div>
-            <figcaption className="mt-2 text-sm text-white">
-              Sermon 1
-            </figcaption>
+            <figcaption className="text-sm text-white"></figcaption>
           </figure>
 
           <figure className="flex justify-center">
@@ -35,9 +33,7 @@ function Sermons() {
                 allowFullScreen
               ></iframe>
             </div>
-            <figcaption className="mt-2 text-sm text-white">
-              Sermon 2
-            </figcaption>
+            <figcaption className="text-sm text-white"></figcaption>
           </figure>
         </div>
       </div>
