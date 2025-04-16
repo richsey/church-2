@@ -7,6 +7,8 @@ import { ScriptureRoutes } from "./routes/ScriptureRoutes.js";
 dotenv.config();
 const app = express();
 
+app.use(express.static("public")); // Automatically sets correct MIME
+
 app.use(express.json());
 // app.use(cookieParser());
 app.use(
