@@ -18,7 +18,7 @@ app.use(
 );
 
 app.use("/", ScriptureRoutes);
-
-app.listen(5004, () => {
+const PORT =5004 || process.env.PORT
+app.listen(PORT, () => {
   console.log(`Server is running on port 5004`);
 });
