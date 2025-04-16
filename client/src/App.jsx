@@ -84,7 +84,7 @@ function App() {
       <footer className="fixed bottom-0 w-full bg-blue-900">
         <div className="flex flex-col sm:flex-row items-center justify-between w-full h-auto sm:h-[100px] bg-gray-700 px-6 sm:px-20 py-6 sm:py-0 space-y-4 sm:space-y-0">
           <div className="flex items-center space-x-4">
-            <img src="gec-logo.png" alt="Logo" className="w-18 h-16" />
+            <img src="./images/gec-logo.png" alt="Logo" className="w-18 h-16" />
             <div className="text-gray-300 text-sm">
               <p>© 2020 Global Evangelical Church</p>
               <p>All rights reserved.</p>
