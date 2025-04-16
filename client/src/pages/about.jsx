@@ -21,7 +21,7 @@ function About() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="block px-4 py-2 rounded transition-all duration-300 text-white hover:bg-white hover:text-purple-900 hover:shadow-md"
+                  className="block px-4 py-2 rounded transition-all duration-300 text-white hover:bg-white hover:text-purple-900 hover:shadow-md active:bg-white active:text-purple-900 active:shadow-md"
                 >
                   {item.label}
                 </a>
