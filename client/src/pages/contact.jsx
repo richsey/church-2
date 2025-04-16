@@ -19,7 +19,7 @@ function Contact() {
       {/* Contact Section */}
       <div className="w-full flex flex-col lg:flex-row justify-between items-start mt-10 px-4 sm:px-6 lg:px-20 gap-10 bg-[url('./images/footer-img.png')] mb-8">
         {/* Contact Form */}
-        <div className="w-full lg:w-1/2 rounded-lg shadow-lg p-6 text-white">
+        <div className="w-full lg:w-1/2 rounded-lg shadow-lg p-6 text-white ">
           <h2 className="text-xl font-semibold mb-4">Contact Us</h2>
           <form>
             <div className="mb-4">

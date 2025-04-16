@@ -41,30 +41,35 @@ function App() {
           <Link
             to="/"
             className="text-gray-600 hover:text-blue-500 transition py-2 md:py-0"
+            onClick={() => setShowMenu(false)}
           >
             Home
           </Link>
           <Link
             to="/sermons"
             className="text-gray-600 hover:text-blue-500 transition py-2 md:py-0"
+            onClick={() => setShowMenu(false)}
           >
             Sermons
           </Link>
           <Link
             to="/events"
             className="text-gray-600 hover:text-blue-500 transition py-2 md:py-0"
+            onClick={() => setShowMenu(false)}
           >
             Events
           </Link>
           <Link
             to="/about"
             className="text-gray-600 hover:text-blue-500 transition py-2 md:py-0"
+            onClick={() => setShowMenu(false)}
           >
             About
           </Link>
           <Link
             to="/contact"
             className="text-gray-600 hover:text-blue-500 transition py-2 md:py-0"
+            onClick={() => setShowMenu(false)}
           >
             Contact
           </Link>
