@@ -17,7 +17,7 @@ function App() {
         {/* Logo and Title */}
         <div className="flex items-center justify-between w-full md:w-auto">
           <div className="flex items-center space-x-4">
-            <img src="gec-logo.png" alt="Logo" className="w-14 h-14" />
+            <img src="./images/gec-logo.png" alt="Logo" className="w-14 h-14" />
             <h1 className="text-xl md:text-2xl font-bold text-black">
               Global Evangelical Church
             </h1>
