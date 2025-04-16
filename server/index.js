@@ -11,14 +11,14 @@ app.use(express.json());
 // app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://gectest1.netlify.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
 
 app.use("/", ScriptureRoutes);
-const PORT =5004 || process.env.PORT
+const PORT = 5004 || process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Server is running on port 5004`);
 });
