@@ -56,7 +56,7 @@ function Contact() {
         </div>
 
         {/* Contact Info */}
-        <div className="w-full lg:w-1/2 flex flex-col items-start text-white">
+        <div className="w-full lg:w-1/2 flex-col items-start text-white">
           <h3 className="text-2xl font-bold mb-4">Contact Info</h3>
           <div className="mb-4">
             <p className="text-lg flex items-center gap-2">

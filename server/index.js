@@ -11,15 +11,15 @@ app.use(express.static("public")); // Automatically sets correct MIME
 // Your Express server
 app.use(express.static("dist"));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "dist", "index.html"));
+// });
 
 app.use(express.json());
 // app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://gectest1.netlify.app/",
+    origin: "http://localhost:5173",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
