@@ -3,25 +3,28 @@ import db from "../utils/db.js";
 
 const router = express.Router();
 
+// Middleware to parse JSON request bodies
+router.use(express.json());
+
 // Insert a new Bible verse
 router.post("/api/add-verse", async (req, res) => {
-  const { text, reference } = req.body;
+  const { verse, reference } = req.body;
 
-  if (!text || !reference) {
+  if (!verse || !reference) {
     return res.status(400).json({ error: "All fields are required." });
   }
 
   try {
-    const [result] = await db.query(
-      "INSERT INTO scriptures (text, reference) VALUES (?, ?)",
-      [text, reference]
-    );
+    const { data, error } = await db
+      .from("scriptures")
+      .insert([{ verse, reference }])
+      .select();
+
+    if (error) throw error;
 
     res.status(201).json({
       message: "Verse added successfully",
-      id: result.insertId,
-      text,
-      reference,
+      ...data[0],
     });
   } catch (error) {
     console.error("Error inserting scripture:", error);
@@ -29,13 +32,22 @@ router.post("/api/add-verse", async (req, res) => {
   }
 });
 
-//get random scripture
+// Get random scripture
 router.get("/random-verse", async (req, res) => {
   try {
-    const [rows] = await db.query(
-      "SELECT * FROM scriptures ORDER BY RAND() LIMIT 1"
-    );
-    res.json(rows[0]);
+    const { data, error } = await db
+      .from("scriptures")
+      .select("*")
+      .order("id", { ascending: false });
+
+    if (error) throw error;
+
+    if (data.length === 0)
+      return res.status(404).json({ error: "No verses found." });
+
+    const randomVerse = data[Math.floor(Math.random() * data.length)];
+
+    res.json(randomVerse);
   } catch (err) {
     console.error("Error fetching verse:", err);
     res.status(500).json({ error: "Internal server error" });
