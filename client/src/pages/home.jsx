@@ -63,7 +63,7 @@ function Home() {
           >
             <h2 className="text-xl sm:text-2xl font-bold">Scripture</h2>
             <p className="mt-2 italic text-sm sm:text-base">
-              "{scripture.text}"
+              "{scripture.verse}"
             </p>
             <p className="italic text-sm sm:text-base">
               -{scripture.reference}
