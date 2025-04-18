@@ -80,7 +80,7 @@ function Home() {
             <div className="justify-center flex w-full max-w-5xl">
               <img
                 className="rounded mt-6 w-full h-auto object-cover mb-1"
-                src="./public/images/BG1.jpg"
+                src="./images/banner.jpg"
                 alt="Church background"
               />
             </div>
