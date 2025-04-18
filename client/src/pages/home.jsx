@@ -8,12 +8,15 @@ function Home() {
 
   const fetchScripture = async () => {
     try {
-      const response = await fetch("http://localhost:5004/random-verse", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://church-2-81pk.onrender.com/random-verse",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
